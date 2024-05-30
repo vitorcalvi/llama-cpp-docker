@@ -5,7 +5,7 @@ services:
     environment:
       - GGML_CUDA_NO_PINNED=1
       - LLAMA_CTX_SIZE=2048
-      - LLAMA_MODEL=/models/mistral-portuguese-luana-7b-mental-health.Q5_K_M.gguf
+      - LLAMA_MODEL=/models/*.gguf
       - LLAMA_N_GPU_LAYERS=99
     volumes:
       - ./models:/models
