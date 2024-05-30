@@ -1,3 +1,6 @@
-python3 convertToGGUF.py  --hf_token hf_ --model_id klyang/MentaLLaMA-chat-7B-hf --outtype bf16
+python3 convertToGGUF.py  --hf_token xx \
+--outtype bf16  \
+--model_id THUDM/cogvlm2-llama3-chat-19B-int4 
+
 
 #In this case we're also quantizing the model to 8 bit by setting --outtype bf16. Quantizing helps improve inference speed, but it can negatively impact quality. You can use --outtype #f16 (16 bit) or --outtype f32 (32 bit) to preserve original quality.
