@@ -68,21 +68,6 @@ class Params:
         hf_config_path = model_plus.model.config_path
         return Params.loadHFTransformerJson(model_plus.model, hf_config_path)
 
-def _set_special_token(self, typ, tid):
-    if tid is None or tid < 0:
-        # Set a default value for invalid token IDs
-        if typ == "pad":
-            tid = 0  # Default pad token ID
-        elif typ == "bos":
-            tid = 1  # Default bos token ID
-        elif typ == "eos":
-            tid = 2  # Default eos token ID
-        elif typ == "unk":
-            tid = 3  # Default unk token ID
-        else:
-            raise ValueError(f'invalid value for special token type {typ}: {tid}')
-    self.special_tokens[typ] = tid
-
 def main():
     # Your main function code here
     pass
@@ -113,6 +98,8 @@ if not os.path.isfile(f"{local_dir}.gguf"):
     raise FileNotFoundError(f"The converted model file '{local_dir}.gguf' was not found.")
 
 # Upload the converted model to Hugging Face Hub
+####
+
 # api = HfApi(token=hf_token)
 # api.create_repo(model_id, exist_ok=True, repo_type="model")
 # api.upload_file(
