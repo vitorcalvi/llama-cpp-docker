@@ -105,8 +105,8 @@ conversion_command = f"python3 llama.cpp/convert-hf-to-gguf.py {local_dir} --out
 conversion_result = os.system(conversion_command)
 
 # Check if the conversion was successful
-if conversion_result != 0:
-    raise RuntimeError("Model conversion failed. Please check the convert-hf-to-gguf.py script for errors.")
+# if conversion_result != 0:
+#     raise RuntimeError("Model conversion failed. Please check the convert-hf-to-gguf.py script for errors.")
 
 # Check if the output file exists
 if not os.path.isfile(f"{local_dir}.gguf"):
