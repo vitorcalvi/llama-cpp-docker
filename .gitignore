@@ -1,3 +1,5 @@
 *.gguf
 models/
-llama.cpp
+llama.cpp/
+Phi-3-mini-4k-instruct/
+llava-med-v1.5-mistral-7b/
